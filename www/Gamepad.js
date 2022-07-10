@@ -77,7 +77,7 @@ var cordova = require('cordova');
             // This is the Cordova success callback.
             function success(nativeGamepads) {
                 // If the merge flag is active, update the gamepads array in the JS side using the nativeGamepads array from the native side.
-                if (USE_MERGE) {
+                if (!USE_MERGE) {
                     if (nativeGamepads.length === 0) {
                             gamepads = [];
                     }
